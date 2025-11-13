@@ -1,6 +1,5 @@
-#include "lab4-1.h"
+#include "lab4.h"
 
-#include <iostream>
 int main() {
   Gun ak;
   Gun m4("m4a1", 30, 3.52);
@@ -10,3 +9,5 @@ int main() {
 
   return 0;
 }
+
+Gun::~Gun() {};
