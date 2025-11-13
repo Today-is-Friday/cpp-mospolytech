@@ -1,15 +1,4 @@
 #include "lab2-3.h"
-double sum(const double num) {
-  double result = 0;
-  for (int i = 0; i <= num; ++i) result += i;
-
-  return result;
-}
-
-void sum(const double num1, const double num2, double& num3, double& num4) {
-  num3 = num1 + num2;
-  num4 = num1 * num2;
-}
 
 int main() {
   double a[2][3] = {{1, 2, 3}, {4, 5, 6}};
@@ -56,4 +45,16 @@ int main() {
   //    |
 
   return 0;
+}
+
+double sum(const double num) {
+  double result = 0;
+  for (int i = 0; i <= num; ++i) result += i;
+
+  return result;
+}
+
+void sum(const double num1, const double num2, double& num3, double& num4) {
+  num3 = num1 + num2;
+  num4 = num1 * num2;
 }

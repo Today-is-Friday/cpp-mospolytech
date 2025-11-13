@@ -1,5 +1,12 @@
 #include "lab2-4.h"
 
+int main() {
+  for (double j = 0; j < 3; ++j) sum(j);
+
+  cout << macro_sum(10, 2);
+  return 0;
+}
+
 namespace sti {
 void sum(const double num) {
   static double num_1 = 0;
@@ -7,10 +14,3 @@ void sum(const double num) {
   num_1 = num;
 }
 }  // namespace sti
-
-int main() {
-  for (double j = 0; j < 3; ++j) sum(j);
-
-  cout << macro_sum(10, 2);
-  return 0;
-}
