@@ -15,14 +15,14 @@ int main() {
   double a[2][3] = {{1, 2, 3}, {4, 5, 6}};
   double b;
   for (int i = 0; i < 2; ++i)
-    for (int j = 0; j < 3; ++j) b += a[i][j];
+    for (int j = 0; j < 3; ++j) b += i[a][j];
 
   std::cout << b << "\n";
   double c[3] = {0};
   for (int j = 0; j < 3; ++j) {
-    for (int i = 0; i < 2; ++i) c[j] += a[i][j];
+    for (int i = 0; i < 2; ++i) j[c] += i[a][j];
 
-    std::cout << c[j] << " ";
+    std::cout << j[c] << " ";
   }
 
   float d = 20.84;
