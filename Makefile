@@ -25,7 +25,8 @@ lab4: lab4/lab4-1.cpp lab4/lab4-2.cpp lab4/lab4-4.cpp lab4/gun.cpp
 	$(CC) $(cflags) lab4/lab4-4.cpp -o lab4-4.out
 
 lab5: lab5/gun.cpp lab5/lab5.h lab5/lab5-1.cpp lab5/magicional_gun.cpp
-	$(CC) $(cflags) lab5/gun.cpp lab5/lab5.h lab5/lab5-1.cpp lab5/magicional_gun.cpp -o lab5-1.out
+	$(CC) $(cflags) -g lab5/gun.cpp lab5/lab5.h lab5/lab5-1.cpp lab5/magicional_gun.cpp -o lab5-1.out
+	$(CC) $(cflags) -g lab5/gun.cpp lab5/lab5.h lab5/lab5-2.cpp lab5/magicional_gun.cpp -o lab5-2.out
 
 clean:
 	rm -f *.out

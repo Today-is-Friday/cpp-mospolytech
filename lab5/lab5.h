@@ -18,12 +18,15 @@ class Gun {
   Gun();
   Gun(std::string name_, GunType gun_type_, double dmg_, double weight_);
 
-  std::string get_name();
-  double get_dmg();
-  double get_weight();
-  GunType get_gun_type();
+  std::string get_name() const;
+  virtual double get_dmg() const;
+  double get_weight() const;
+  GunType get_gun_type() const;
   void set_dmg(const double dmg_);
   void set_gun_type(const GunType gun_type_);
+
+  bool operator>(const Gun& other);
+  bool operator<(const Gun& other);
 };
 
 class MagicianGun : public Gun {
@@ -35,7 +38,8 @@ class MagicianGun : public Gun {
   MagicianGun(std::string name_, GunType gun_type_, double dmg_, double weight_,
               double additional_dmg_);
 
-  double get_additional_dmg();
+  double get_additional_dmg() const;
+  double get_dmg() const override;
 };
 
 struct Player {
@@ -44,7 +48,7 @@ struct Player {
   std::string password;
 
   void print() {
-    std::cout << "-\n" << id << "\n" << login << "\n" << password << "\n-\n";
+    std::cout << "\n-\n" << id << "\n" << login << "\n" << password << "\n-\n";
   }
 };
 
