@@ -1,9 +1,9 @@
 CC = g++
 cflags = -Wall -Werror -Wextra -std=c++20
 
-.PHONY: all lab1 lab2 lab3 lab4 lab5 lab5-2
+.PHONY: all lab1 lab2 lab3 lab4 lab5 lab5-2 lab6
 
-all: lab1 lab2 lab3 lab4 lab5 lab5-2
+all: lab1 lab2 lab3 lab4 lab5 lab5-2 lab6
 
 lab1: lab1/lab1-1.cpp lab1/lab1-2.cpp
 	$(CC) $(cflags) lab1/lab1-1.cpp -o lab1-1.out
@@ -30,6 +30,9 @@ lab5: lab5/gun.cpp lab5/lab5.h lab5/lab5-1.cpp lab5/lab5-2.cpp lab5/magicional_g
 
 lab5-2: lab5-2/gun.cpp lab5-2/lab5.h lab5-2/lab5-2.cpp lab5-2/magicional_gun.cpp lab5-2/one_time_gun.cpp
 	$(CC) $(cflags) lab5-2/gun.cpp lab5-2/lab5.h lab5-2/lab5-2.cpp lab5-2/magicional_gun.cpp lab5-2/one_time_gun.cpp -o lab5-3.out
+
+lab6: lab6/lab6.cpp lab6/lab6.h
+	$(CC) $(cflags) lab6/lab6.cpp -o lab6.out
 
 clean:
 	rm -f *.out
